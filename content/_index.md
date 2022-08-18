@@ -14,6 +14,6 @@ For more check out my academic & professional [resume].
 Contact me at [@username] or by [email].
 
 [projects]: /projects
-[resume]: https://demo.nurlan.co/hugo-vitae/
+[resume]: https://de.linkedin.com/in/mathias-witte-paz-111787163/en
 [@username]: https://twitter.com/wittepaz
 [email]: mailto:mwittep@gmail.com

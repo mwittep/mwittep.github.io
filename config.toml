@@ -11,7 +11,7 @@ theme = "hugo-sustain"
   post = "/:year/:month/:day/:slug"
 
 [params]
-  avatar = "img/profile.png"
+  avatar = "/img/Mathias.jpg"
   author = "Mathias Witte Paz"
   description = "About Mathias Witte Paz"
 
@@ -22,16 +22,11 @@ theme = "hugo-sustain"
 [params.social]
   Github        = "mwittep"
   Email         = "mwittep@gmail.com"
-  Twitter       = "mwittep"
+  Twitter       = "wittepaz"
   LinkedIn      = "mathias-witte-paz"
 
 
 ## Main Menu
-[[menu.main]]
-  name = "blog"
-  weight = 100
-  identifier = "blog"
-  url = "/blog/"
 [[menu.main]]
   name = "projects"
   identifier = "projects"

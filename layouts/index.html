@@ -1,0 +1,124 @@
+{{ define "main" }}
+{{ $p := .Site.Params }}
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div>
+      <div class="hero__eyebrow"><span class="pulse"></span>{{ $p.status }}</div>
+      <h1>{{ $p.headline }}</h1>
+      <p class="hero__lede">{{ $p.lede | safeHTML }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">{{ partial "icon.html" "arrow" }}See the work</a>
+        <a class="btn" href="#publications">{{ partial "icon.html" "paper" }}Publications</a>
+        <a class="btn" href="https://github.com/{{ $p.Social.Github }}" rel="noopener">{{ partial "icon.html" "github" }}GitHub</a>
+        {{ with $p.Social.Scholar }}
+          <a class="btn" href="{{ . }}" rel="noopener">{{ partial "icon.html" "scholar" }}Scholar</a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero__portrait">
+      <img src="{{ $p.avatar }}" alt="Portrait of {{ $p.Author }}" width="200" height="200">
+    </div>
+  </div>
+</section>
+
+<section class="dogma">
+  <div class="wrap">
+    <div class="dogma__grid">
+      {{ range .Site.Data.dogma.layers }}
+        <div class="dogma__cell reveal" data-layer="{{ .id }}">
+          <div class="dogma__label mono">{{ .label }}</div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .body }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">About</div>
+      <h2>Integrative computational analyses across the central dogma</h2>
+    </div>
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</section>
+
+<section class="section section--alt" id="projects">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Projects</div>
+      <h2>{{ .Site.Data.projects.name }}</h2>
+      <p>{{ .Site.Data.projects.intro }}</p>
+    </div>
+    <div class="projects">
+      {{ range .Site.Data.projects.source }}
+        {{ if .featured }}{{ partial "project-card.html" . }}{{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Publications</div>
+      <h2>{{ .Site.Data.publications.name }}</h2>
+      <p>{{ .Site.Data.publications.intro }}</p>
+      {{ with .Site.Params.Social.Scholar }}
+        <p style="margin-top:14px">
+          <a class="link-btn" href="{{ . }}" rel="noopener">{{ partial "icon.html" "scholar" }}Full profile on Google Scholar</a>
+        </p>
+      {{ end }}
+    </div>
+    {{ partial "publications.html" . }}
+  </div>
+</section>
+
+<section class="section section--alt" id="teaching">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Teaching</div>
+      <h2>{{ .Site.Data.teaching.name }}</h2>
+      <p>{{ .Site.Data.teaching.intro }}</p>
+    </div>
+    {{ partial "teaching.html" . }}
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Contact</div>
+      <h2>Get in touch</h2>
+      <p>Happy to talk about prokaryotic characterization, reproducible pipelines, or making bioinformatics tools that domain experts can actually use.</p>
+    </div>
+    <div class="contact__grid">
+      <a class="contact-card" href="mailto:{{ $p.Social.Email }}">
+        {{ partial "icon.html" "mail" }}
+        <div><span>Email</span><b>{{ $p.Social.Email }}</b></div>
+      </a>
+      <a class="contact-card" href="https://github.com/{{ $p.Social.Github }}" rel="noopener">
+        {{ partial "icon.html" "github" }}
+        <div><span>GitHub</span><b>@{{ $p.Social.Github }}</b></div>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/{{ $p.Social.LinkedIn }}" rel="noopener">
+        {{ partial "icon.html" "linkedin" }}
+        <div><span>LinkedIn</span><b>Mathias Witte Paz</b></div>
+      </a>
+      {{ with $p.Social.Scholar }}
+        <a class="contact-card" href="{{ . }}" rel="noopener">
+          {{ partial "icon.html" "scholar" }}
+          <div><span>Google Scholar</span><b>Citations &amp; profile</b></div>
+        </a>
+      {{ end }}
+      <a class="contact-card" href="{{ $p.group_url }}" rel="noopener">
+        {{ partial "icon.html" "building" }}
+        <div><span>Group</span><b>{{ $p.group }}</b></div>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

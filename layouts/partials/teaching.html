@@ -1,0 +1,34 @@
+{{- /* Renders data/teaching.yml. Bar widths are scaled to the largest count
+       across all blocks, so the two blocks stay visually comparable. */ -}}
+{{- $t := .Site.Data.teaching -}}
+{{- $max := 0 -}}
+{{- range $t.blocks -}}
+  {{- range .rows -}}
+    {{- if gt .count $max }}{{ $max = .count }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="teach__grid">
+  {{ range $t.blocks }}
+    {{- $total := 0 -}}
+    {{- range .rows }}{{ $total = add $total .count }}{{ end -}}
+
+    <div class="teach-block reveal">
+      <div class="teach__total">
+        <span class="teach__num">{{ $total }}</span>
+        <span class="teach__cap">{{ .total_label }}</span>
+      </div>
+      <div class="teach__rows">
+        {{ range .rows }}
+          <div class="teach-row">
+            <span class="teach-row__n mono">{{ .count }}</span>
+            <span class="teach-row__label">{{ .label }}</span>
+            <span class="teach-row__bar" aria-hidden="true">
+              <span class="teach-row__fill" style="{{ printf "width: %.1f%%" (mul (div (float .count) $max) 100.0) | safeCSS }}"></span>
+            </span>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>

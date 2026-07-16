@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Projects</div>
+      <h2>{{ .Site.Data.projects.name }}</h2>
+      <p>{{ .Site.Data.projects.intro }}</p>
+    </div>
+
+    {{ with .Content }}<div class="prose" style="margin-bottom:32px">{{ . }}</div>{{ end }}
+
+    <div class="projects">
+      {{ range .Site.Data.projects.source }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

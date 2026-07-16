@@ -1,0 +1,19 @@
+name: Teaching & supervision
+intro: >-
+  Supervision was one of the most rewarding parts of the PhD. Alongside student theses and
+  projects, I taught and co-organised courses at the Faculty of Science in Tübingen.
+
+blocks:
+  - id: supervised
+    total_label: theses & projects supervised
+    rows:
+      - { label: Bachelor's theses, count: 8 }
+      - { label: Master's theses, count: 3 }
+      - { label: Research projects, count: 1 }
+
+  - id: taught
+    total_label: courses taught & supervised
+    rows:
+      - { label: Classes as teaching assistant, count: 4 }
+      - { label: Practical modules, count: 2 }
+      - { label: Seminars, count: 1 }

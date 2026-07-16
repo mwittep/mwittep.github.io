@@ -1,19 +1,29 @@
 ---
+description: "Mathias Witte Paz — bioinformatician in Tübingen building tools and pipelines for prokaryotic characterization across the genome, transcriptome and proteome."
 ---
 
-Hi! I'm **Mathias Witte Paz**, a bioinformatician (M. Sc.) graduated from the university of Tübingen (Germany)
+Antibiotic resistance is rising while the discovery of new compounds is slowing down. Finding
+new ways to control microbes means understanding the mechanisms behind what they do — and no
+single layer of data explains that on its own.
 
-I’m interested in genomic, transcriptomics, phylogenetics and (biological) data visualization.
+My doctoral research, in the [Integrative Transcriptomics group][it] at the University of
+Tübingen under Prof. Dr. Kay Nieselt, focused on the development of computational methods that work *across* the
+central dogma: genome, transcriptome, and the structures they encode. 
 
-I’m currently working on my PhD in the Group Integrative Transcriptomics (Uni Tübingen) on the topic of Analysis and Visualization of microbes communities
+In practice that meant two things. Building integrative pipelines that combine data sources rather than analysing
+them in isolation — and putting them behind interfaces that biologists can use without first
+resolving a dependency tree.
 
-Have a look at some of my working [projects].
+Before the PhD I completed my BSc and MSc in bioinformatics in Tübingen, having moved from
+Guayaquil, Ecuador was funded by the Cluster of
+Excellence [Controlling Microbes to Fight Infections][cmfi]. I currently work with the
+[Brochado Lab][brolab]
+.
 
-For more check out my academic & professional [resume].
-
-Contact me at [@username] or by [email].
-
-[projects]: /projects
-[resume]: https://de.linkedin.com/in/mathias-witte-paz-111787163/en
-[@username]: https://twitter.com/wittepaz
-[email]: mailto:mwittep@gmail.com
+[it]: https://it.inf.uni-tuebingen.de/
+[tuevis]: https://tuevis.cs.uni-tuebingen.de/
+[cmfi]: https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-cmfi/
+[ev]: https://evidente-tuevis.cs.uni-tuebingen.de/
+[tw]: https://tsspredator-tuevis.cs.uni-tuebingen.de/
+[tc]: https://tsscaptur-tuevis.cs.uni-tuebingen.de/
+[brolab]: https://www.brochadolab.com/

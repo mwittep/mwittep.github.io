@@ -1,0 +1,23 @@
+# The three layers used as the organising metaphor of the site.
+# Each maps to an accent colour in assets/css/portfolio.css.
+layers:
+  - id: genome
+    label: Genome
+    title: What the organism could do
+    body: >-
+      SNPs in their evolutionary context, biosynthetic gene clusters, and the receptors
+      that decide who gets the iron.
+
+  - id: transcriptome
+    label: Transcriptome
+    title: What it actually does
+    body: >-
+      Transcription start sites, the architecture around them, and the overlooked
+      transcripts most workflows throw away.
+
+  - id: protein
+    label: Protein
+    title: How it pulls it off
+    body: >-
+      Predicted structures compared by fold rather than sequence — finding the machinery
+      that homology searches miss.

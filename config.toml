@@ -3,6 +3,9 @@ languageCode = "en-US"
 title = "Mathias Witte Paz"
 theme = "hugo-sustain"
 
+# Emit robots.txt from layouts/robots.txt (off by default in Hugo).
+enableRobotsTXT = true
+
 [permalinks]
   post = "/:year/:month/:day/:slug"
 

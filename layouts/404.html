@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Error 404</div>
+      <h2>This transcript could not be classified.</h2>
+      <p>The page you asked for doesn't exist — much like the orphan TSS that inspired half my thesis. Here's a way back.</p>
+    </div>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ .Site.BaseURL }}">{{ partial "icon.html" "arrow" }}Home</a>
+      <a class="btn" href="{{ .Site.BaseURL }}projects/">Projects</a>
+      <a class="btn" href="{{ .Site.BaseURL }}publications/">Publications</a>
+    </div>
+  </div>
+</section>
+{{ end }}

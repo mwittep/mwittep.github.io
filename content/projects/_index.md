@@ -1,6 +1,5 @@
 ---
-categories: ["projects"]
-date: "2016-10-02T22:55:05-04:00"
-tags: ["projects"]
 title: "Projects"
+layout: "projects"
+description: "Tools, pipelines and studies for prokaryotic characterization: Evidente, TSSpredator-Web, TSS-Captur, PRESERVE, and the metallophore landscape of Staphylococcus."
 ---

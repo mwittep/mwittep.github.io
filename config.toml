@@ -10,10 +10,22 @@ theme = "hugo-sustain"
 [permalinks]
   post = "/:year/:month/:day/:slug"
 
+# No taxonomy pages: the site is a portfolio, not a blog.
+[taxonomies]
+
 [params]
   avatar = "/img/Mathias.jpeg"
   author = "Mathias Witte Paz"
-  description = "About Mathias Witte Paz"
+  role = "Bioinformatician"
+  description = "Bioinformatician in Tübingen building tools and pipelines for prokaryotic characterization across the genome, transcriptome and proteome."
+
+  # Hero
+  status = "PhD in bioinformatics · Tübingen"
+  headline = "I build tools that read bacteria across every layer at once."
+  lede = "Bioinformatician working on <strong>prokaryotic characterization for microbial control</strong> — visual analytics for genomic variation, reproducible pipelines for transcriptome architecture, and structure-based searches for the machinery bacteria use to steal each other's iron."
+
+  group = "Brochado Lab"
+  group_url = "https://www.brochadolab.com/"
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
@@ -24,16 +36,27 @@ theme = "hugo-sustain"
   Email         = "mwittep@gmail.com"
   Twitter       = "wittepaz"
   LinkedIn      = "mathias-witte-paz-111787163"
-
+  # Full URL: Scholar profile IDs are opaque, so no template can build this.
+  Scholar       = "https://scholar.google.com/citations?user=3DIQUzMAAAAJ&hl=en"
 
 ## Main Menu
+[[menu.main]]
+  name = "about"
+  identifier = "about"
+  weight = 100
+  url = "/#about"
 [[menu.main]]
   name = "projects"
   identifier = "projects"
   weight = 200
   url = "/projects/"
 [[menu.main]]
-  name = "resume"
-  identifier = "resume"
+  name = "publications"
+  identifier = "publications"
   weight = 300
-  url = "/resume/"
+  url = "/publications/"
+[[menu.main]]
+  name = "contact"
+  identifier = "contact"
+  weight = 400
+  url = "/#contact"

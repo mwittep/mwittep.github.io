@@ -1,0 +1,47 @@
+{{- /* Renders data/publications.yml grouped by year, newest first. */ -}}
+{{- $pubs := .Site.Data.publications.source -}}
+{{- $years := slice -}}
+{{- range $pubs -}}
+  {{- if not (in $years .year) -}}
+    {{- $years = $years | append .year -}}
+  {{- end -}}
+{{- end -}}
+{{- $years = sort $years "value" "desc" -}}
+
+<div class="pubs">
+  {{- range $year := $years }}
+    <div class="pub-year">{{ $year }}</div>
+    {{- range $pubs -}}
+      {{- if eq .year $year }}
+        <div class="pub{{ if .first_author }} pub--first{{ end }}">
+          <span class="pub__marker" {{ if .first_author }}title="First author"{{ end }}></span>
+          <div>
+            <p class="pub__title">
+              {{- if .doi -}}
+                <a href="https://doi.org/{{ .doi }}" rel="noopener">{{ .title }}</a>
+              {{- else -}}
+                {{ .title }}
+              {{- end -}}
+            </p>
+            <p class="pub__authors">
+              {{- range $i, $a := .authors -}}
+                {{- if $i }}, {{ end -}}
+                {{- if in $a "Witte Paz" -}}
+                  <span class="me">{{ $a }}</span>
+                {{- else -}}
+                  {{ $a }}
+                {{- end -}}
+              {{- end -}}
+            </p>
+            <div class="pub__meta">
+              {{- with .venue }}<span class="pub__venue">{{ . }}</span>{{ end -}}
+              {{- with .details }}<span>{{ . }}</span>{{ end -}}
+              {{- with .status }}<span class="pub__status">{{ . }}</span>{{ end -}}
+              {{- with .doi }}<a class="pub__doi" href="https://doi.org/{{ . }}" rel="noopener">doi:{{ . }}</a>{{ end -}}
+            </div>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
+  {{- end }}
+</div>

@@ -1,36 +1,99 @@
 name: Projects
+intro: >-
+  Five projects from my doctoral research, each built to integrate data across the
+  layers of the central dogma. Three are tools you can run in your browser; two are
+  systematic studies of how bacteria compete for metals.
+
 source:
-  - icon: fa fa-github
-    name: Project 1
-    description: Ei viderer tacimates pro, quem assum ea nam. Veritus omnesque eam te. Et natum mucius tamquam vel, ea dolorem volumus deterruisset nec. Graeci mentitum sea an, eu prima elaboraret est.
-    url: https://github.com/nurlansu/hugo-sustain
+  - name: Evidente
+    tagline: SNPs in their evolutionary context
+    kind: Visual analytics tool
+    layers: [genome]
+    year: 2022
+    featured: true
+    description: >-
+      SNP-based phylogenetic trees are usually read as trees alone, leaving the underlying
+      genomic variation unexplored. Evidente classifies SNPs by clade-specificity using
+      CLASSICO and puts them next to the tree, sample metadata, and GO-term enrichment in a
+      single interface — so genome-wide variation can be interpreted evolutionarily to
+      generate functional and phenotypic hypotheses. Applied to Mycobacterium leprae and
+      Treponema pallidum datasets.
+    stack: [Python, JavaScript, D3, phylotree.js, Flask]
+    links:
+      - { label: Live app, url: "https://evidente-tuevis.cs.uni-tuebingen.de/", icon: app }
+      - { label: Paper, url: "https://doi.org/10.1093/bioadv/vbac075", icon: paper }
+      - { label: Code, url: "https://github.com/Integrative-Transcriptomics/Evidente2.0", icon: code }
+      - { label: CLASSICO, url: "https://github.com/Integrative-Transcriptomics/Classico", icon: code }
 
-  - icon: fa fa-github
-    name: Project 2
-    description: An eripuit phaedrum qui, nec facer splendide ex, vel ea assum facilisi convenire. Te his neglegentur consectetuer.
-    url: https://github.com/nurlansu/hugo-sustain
+  - name: TSSpredator-Web
+    tagline: Transcription start sites, predicted and explored
+    kind: Web application
+    layers: [genome, transcriptome]
+    year: 2026
+    featured: true
+    description: >-
+      TSSpredator identifies and classifies transcription start sites from genome-wide
+      transcriptomic data, but running it and making sense of the output took real
+      computational skill. TSSpredator-Web wraps the prediction in a browser interface and
+      adds an integrated genome browser, so genome-wide TSS maps can be explored together
+      with the underlying genomic data across conditions. Demonstrated on E. coli under
+      three antibiotic treatments.
+    stack: [Java, React, JavaScript, Docker]
+    links:
+      - { label: Live app, url: "https://tsspredator-tuevis.cs.uni-tuebingen.de/", icon: app }
+      - { label: Code, url: "https://github.com/Integrative-Transcriptomics/TSSpredator-Web", icon: code }
+    note: Accepted for publication in PLOS ONE (February 2026)
 
-  - icon: fa fa-github
-    name: Project 3
-    description: An alii quot tantas eum, doming platonem persecuti mea et, vim perpetua cotidieque delicatissimi in.
-    url: https://github.com/nurlansu/hugo-sustain
+  - name: TSS-Captur
+    tagline: Characterizing the transcripts nobody classified
+    kind: Nextflow pipeline & web app
+    layers: [genome, transcriptome]
+    year: 2024
+    featured: true
+    description: >-
+      TSS prediction leaves behind a pile of unclassified start sites that most workflows
+      simply drop. TSS-Captur takes those orphans and reconstructs what they actually
+      transcribe: sequence classification into coding or non-coding, terminator prediction,
+      secondary structure, and promoter motif analysis — surfacing previously overlooked
+      non-coding RNAs and small protein-coding genes. Results come back as an interactive
+      report.
+    stack: [Nextflow DSL2, Python, CNIT, BLAST, RNAfold, MEME]
+    links:
+      - { label: Live app, url: "https://tsscaptur-tuevis.cs.uni-tuebingen.de/", icon: app }
+      - { label: Paper, url: "https://doi.org/10.1093/nargab/lqae168", icon: paper }
+      - { label: Code, url: "https://github.com/Integrative-Transcriptomics/tss-captur", icon: code }
 
-  - icon: fa fa-globe
-    name: Project 4
-    description: Vim an case vidit sententiae, est at euismod laboramus efficiantur. Ei sit brute lorem, ea eam timeam viderer aliquid, cu integre omittam moderatius quo.
-    url: https://github.com/nurlansu/hugo-sustain
+  - name: The metallophore landscape of Staphylococcus
+    tagline: A genus-wide map of who can make, and who can steal, iron
+    kind: Computational study
+    layers: [genome]
+    year: 2025
+    featured: true
+    description: >-
+      Bacteria secrete metallophores to scavenge scarce metals — and because those molecules
+      work outside the cell, neighbours with the right receptor can help themselves. What
+      S. aureus does is well documented; the rest of the genus was not. This is the first
+      systematic genus-wide characterization, covering 74 species and over 1,900 strains
+      from the GTDB. Every species carries the staphyloferrin A locus, but only 17 can make
+      staphyloferrin B, and uncharacterized biosynthetic clusters turned up along the way.
+    stack: [antiSMASH, MMseqs2, chewBBACA, clinker, BiG-SCAPE, R]
+    links:
+      - { label: Paper, url: "https://doi.org/10.1093/nargab/lqaf183", icon: paper }
 
-  - icon: fa fa-globe
-    name: Project 5
-    description: Dicta causae meliore ex vel, in vix erant integre petentium. Vix ei nisl scripta recusabo, eam doming blandit facilisis.
-    url: https://github.com/nurlansu/hugo-sustain
-
-  - icon: fa fa-cog
-    name: Project 6
-    description: Inermis recusabo elaboraret mea et, dicat neglegentur vim te. Nec et sanctus scriptorem, usu ex sapientem gubergren. Tamquam admodum ei usu.
-    url: https://github.com/nurlansu/hugo-sustain
-
-  - icon: fa fa-cog
-    name: Project 7
-    description: Essent putant indoctum sed in, reprimique persequeris neglegentur te quo. Nam rebum tractatos partiendo at, debet ubique oporteat ut his.
-    url: https://github.com/nurlansu/hugo-sustain
+  # - name: PRESERVE & siderophore piracy in Corynebacteria
+  #   tagline: How nasal commensals hijack the pathogen's iron
+  #   kind: Nextflow pipeline & study
+  #   layers: [genome, transcriptome, protein]
+  #   year: 2026
+  #   featured: true
+  #   description: >-
+  #     Some Corynebacterium species inhibit S. aureus by stealing its siderophores — a
+  #     possible route to microbial control, but the mechanism was known for only one species.
+  #     PRESERVE finds the uptake machinery by structural rather than sequence homology
+  #     (SignalP6 → MMseqs2 → ColabFold → Foldseek), recovering 381 candidate lipoproteins
+  #     across 52 corynebacterial genomes that GO annotation misses. RNA-seq under iron
+  #     limitation confirms they light up, and promoter analysis points to IdeR — not Fur —
+  #     as the regulator.
+  #   stack: [Nextflow, ColabFold, Foldseek, SignalP6, DESeq2, OrthoFinder, XSTREME]
+  #   links: []
+  #   note: Manuscript in progress

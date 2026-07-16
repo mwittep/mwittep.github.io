@@ -1,0 +1,76 @@
+name: Publications
+intro: >-
+  Peer-reviewed work from my doctoral studies. Names in bold mark my own; a dot marks
+  first authorship.
+
+source:
+  - authors: ["Witte Paz, M.", "Herbig, A.", "Nieselt, K."]
+    title: "TSSpredator-Web: A Web-Application for Transcription Start Site Prediction and Exploration"
+    venue: PLOS ONE
+    year: 2026
+    details: "vol. 21, no.3, e0326299"
+    first_author: true
+    thesis_paper: II
+    doi: 10.1371/journal.pone.0326299
+
+  # - authors: ["Witte Paz, M.", "Bitzer, A.", "Heilbronner, S.", "Nieselt, K."]
+  #   title: "Characterizing Siderophore Uptake and their Regulation Mechanisms in Corynebacteria based on Structural Homology and Transcriptome Profiling"
+  #   year: 2026
+  #   status: Manuscript in progress
+  #   first_author: true
+  #   thesis_paper: V
+
+  - authors: ["Witte Paz, M.", "Bitzer, A.", "Nieselt, K.", "Heilbronner, S."]
+    title: "A Landscape of Metallophore Synthesis and Uptake Potential of the Genus Staphylococcus"
+    venue: NAR Genomics and Bioinformatics
+    details: "vol. 7, no. 4, lqaf183"
+    year: 2025
+    doi: 10.1093/nargab/lqaf183
+    first_author: true
+    thesis_paper: IV
+
+  - authors: ["Hackl, S.", "Jachmann, C.", "Witte Paz, M.", "Harbig, T. A.", "Martens, L.", "Nieselt, K."]
+    title: "PTMVision: An Interactive Visualization Webserver for Post-translational Modifications of Proteins"
+    venue: Journal of Proteome Research
+    details: "vol. 24, no. 2, pp. 919–928"
+    year: 2025
+    doi: 10.1021/acs.jproteome.4c00679
+
+  - authors: ["Rahmdel, S.", "Türkoglu, T.", "Nikjoo, N.", "Babaali, E.", "Moradi Mirhesari, D.", "Nega, M.", "Brüggemann, H.", "Huang, L.", "Witte Paz, M.", "Nieselt, K.", "Götz, F."]
+    title: "Beyond Commensalism: Genomic Insights into Micrococcin P1-producing Staphylococcus chromogenes"
+    venue: mSphere
+    details: "e00733–25"
+    year: 2025
+    doi: 10.1128/msphere.00733-25
+
+  - authors: ["Witte Paz, M.", "Vogel, T.", "Nieselt, K."]
+    title: "TSS-Captur: A User-Friendly Pipeline for Characterizing Unclassified RNA Transcripts"
+    venue: NAR Genomics and Bioinformatics
+    details: "vol. 6, no. 4, lqae168"
+    year: 2024
+    doi: 10.1093/nargab/lqae168
+    first_author: true
+    thesis_paper: III
+
+  - authors: ["Brich, N.", "Harbig, T. A.", "Witte Paz, M.", "Nieselt, K.", "Krone, M."]
+    title: "ProtEGOnist: Visual Analysis of Interactions in Small World Networks Using Ego-graphs"
+    venue: Computer Graphics Forum
+    details: "vol. 43, no. 3, e15078"
+    year: 2024
+    doi: 10.1111/cgf.15078
+
+  - authors: ["Harbig, T. A.", "Witte Paz, M.", "Nieselt, K."]
+    title: "GO-Compass: Visual Navigation of Multiple Lists of GO Terms"
+    venue: Computer Graphics Forum
+    details: "vol. 42, no. 3, pp. 271–281"
+    year: 2023
+    doi: 10.1111/cgf.14829
+
+  - authors: ["Witte Paz, M.", "Harbig, T. A.", "Nieselt, K."]
+    title: "Evidente — a Visual Analytics Tool for Data Enrichment in SNP-based Phylogenetic Trees"
+    venue: Bioinformatics Advances
+    details: "vol. 2, no. 1, vbac075"
+    year: 2022
+    doi: 10.1093/bioadv/vbac075
+    first_author: true
+    thesis_paper: I

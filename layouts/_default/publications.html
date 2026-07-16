@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div class="section__kicker">Publications</div>
+      <h2>{{ .Site.Data.publications.name }}</h2>
+      <p>{{ .Site.Data.publications.intro }}</p>
+      {{ with .Site.Params.Social.Scholar }}
+        <p style="margin-top:14px">
+          <a class="link-btn" href="{{ . }}" rel="noopener">{{ partial "icon.html" "scholar" }}Full profile on Google Scholar</a>
+        </p>
+      {{ end }}
+    </div>
+
+    {{ with .Content }}<div class="prose" style="margin-bottom:8px">{{ . }}</div>{{ end }}
+
+    {{ partial "publications.html" . }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,46 @@
+{{- $p := . -}}
+{{- $stops := slice -}}
+{{- range $p.layers -}}
+  {{- $stops = $stops | append (printf "var(--%s)" .) -}}
+{{- end -}}
+{{- if eq (len $stops) 1 -}}
+  {{- $stops = $stops | append (index $stops 0) -}}
+{{- end -}}
+
+<article class="card reveal">
+  <span class="card__bar" style="{{ printf "--stops: %s" (delimit $stops ", ") | safeCSS }}"></span>
+
+  <div class="card__top">
+    <h3>{{ $p.name }}</h3>
+    <span class="card__year mono">{{ $p.year }}</span>
+  </div>
+
+  {{ with $p.tagline }}<p class="card__tagline">{{ . }}</p>{{ end }}
+
+  <div class="chips">
+    <span class="chip chip--kind">{{ $p.kind }}</span>
+    {{ range $p.layers }}
+      <span class="chip chip--layer" data-layer="{{ . }}">{{ . }}</span>
+    {{ end }}
+  </div>
+
+  <p class="card__desc">{{ $p.description }}</p>
+
+  {{ with $p.note }}<p class="card__note">{{ . }}</p>{{ end }}
+
+  {{ with $p.stack }}
+    <div class="chips">
+      {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
+    </div>
+  {{ end }}
+
+  {{ with $p.links }}
+    <div class="card__links">
+      {{ range . }}
+        <a class="link-btn{{ if eq .icon "app" }} link-btn--app{{ end }}" href="{{ .url }}" rel="noopener">
+          {{ partial "icon.html" .icon }}{{ .label }}
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+</article>
